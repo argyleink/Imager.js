@@ -13,3 +13,7 @@ Actual implementation:
 
 - Use grunt-responsive-images for image generation based on a source directory of them
 - Use Imager.js (to be implemented) for the runtime handling of image hot-swapping
+
+Why not srcset/Picturefill polyfills:
+
+- Having reviewed the polyfills for these implementations, the cons outweigh the pros at this point. You either take performance hits or have to deal with 2x image requests, which is counter-intuitive. I'd prefer to just use srcset on its own, but other than WebKit other browsers have yet to implement at this point.
