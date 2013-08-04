@@ -8,3 +8,8 @@ Based on the ImageEnhander concept used by BBC news outlined in .net magazine.
 - Use `setTimeout` with a 250-300ms duration to unblock the UI thread and call a `resizeImage` function which enhanes the `image-replaced` images as necessary
 - Perhaps have an event listener for the resize event which will fire `imager:resize`
 - `resizeImage` is called on page load and each time the `imager:resize` event is fired. It loops through `image-replaced`, changing the `src` attribute to a project hosted image URL with the dimensions required for the image. The resize event will check the dimensions of the page to determine if a new URL is to be served.
+
+Actual implementation:
+
+- Use grunt-responsive-images for image generation based on a source directory of them
+- Use Imager.js (to be implemented) for the runtime handling of image hot-swapping
